@@ -1,0 +1,97 @@
+:root {
+    --orange: orange;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    position: absolute;
+    width: 100vw;
+    height: 6vh;
+    border-bottom: 5px solid var(--orange);
+    background: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #333;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.menu-bar {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('menu.png');
+    filter: invert(2);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.menu-bar.active {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('close.png');
+    filter: invert(2);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+}
+
+.user-list {
+    display: none;
+}
+
+.user-list.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: #eee;
+    transition: 0.5s;
+}
+
+.list-group-items {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.list-group-items a {
+    font-size: 1.7em;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.list-group-items a:hover {
+    color: var(--orange);
+    transform: translateY(-15px);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/98547a9c2e.js" crossorigin="anonymous"></script>
+    <title>Eat All You Want</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="logo">EAYW</div>
+        <div class="menu-bar">
+        </div>
+    </div>
+
+    <ul class="user-list">
+        <li class="list-group-items">
+            <a href="#">Home</a>
+        </li>
+        <li class="list-group-items">
+            <a href="#">About</a>
+        </li>
+        <li class="list-group-items">
+            <a href="#">Service</a>
+        </li>
+        <li class="list-group-items">
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+
+    <section></section>
+
+    <script>
+        const menuBar = document.querySelector('.menu-bar');
+        const userList = document.querySelector('.user-list');
+
+        menuBar.addEventListener('click', () => {
+            userList.classList.toggle('active');
+            menuBar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
